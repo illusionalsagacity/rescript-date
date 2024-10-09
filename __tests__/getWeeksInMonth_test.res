@@ -10,15 +10,14 @@ describe("getWeeksInMonth", () => {
 
     let result = date->ReDate.getWeeksInMonth
 
-    result |> expect |> toEqual(5.)
+    result->expect->toEqual(5.)
   })
 
   test("allows to specify which day is the first day of the week", () => {
     let date = makeWithYMD(~year=2018., ~month=10., ~date=14., ())
-    let getWeeksInMonth = ReDate.getWeeksInMonth(~weekStartsOn=Friday)
 
-    let result = date->getWeeksInMonth
+    let result = date->ReDate.getWeeksInMonth(~weekStartsOn=Friday)
 
-    result |> expect |> toEqual(6.)
+    result->expect->toEqual(6.)
   })
 })

@@ -18,7 +18,7 @@ describe("endOfSecond", () => {
           (),
         ),
         423.,
-      ) |> fromFloat
+      )->fromFloat
     let expectedDate =
       setMilliseconds(
         makeWithYMDHMS(
@@ -31,10 +31,10 @@ describe("endOfSecond", () => {
           (),
         ),
         999.,
-      ) |> fromFloat
+      )->fromFloat
 
     let result = date->ReDate.endOfSecond
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

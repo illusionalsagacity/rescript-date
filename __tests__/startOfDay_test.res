@@ -27,6 +27,6 @@ describe("startOfDay", () => {
 
     let result = date->ReDate.startOfDay
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

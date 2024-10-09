@@ -10,6 +10,6 @@ describe("getDay", () => {
 
     let result = date->ReDate.getDay
 
-    result |> expect |> toEqual(ReDate.Friday)
+    result->expect->toEqual(ReDate.Friday)
   })
 })

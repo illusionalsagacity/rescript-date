@@ -27,7 +27,7 @@ describe("differenceInSeconds", () => {
 
     let result = fstDate->ReDate.differenceInSeconds(sndDate)
 
-    result |> expect |> toEqual(615.)
+    result->expect->toEqual(615.)
   })
 
   test("returns a negative number if the time value of the first date is smaller", () => {
@@ -52,6 +52,6 @@ describe("differenceInSeconds", () => {
 
     let result = fstDate->ReDate.differenceInSeconds(sndDate)
 
-    result |> expect |> toEqual(-615.)
+    result->expect->toEqual(-615.)
   })
 })

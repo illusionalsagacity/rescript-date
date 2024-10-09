@@ -10,7 +10,7 @@ describe("isWeekend", () => {
 
     let result = date->ReDate.isWeekend
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns true if the given date is in a weekend (Sunday)", () => {
@@ -18,7 +18,7 @@ describe("isWeekend", () => {
 
     let result = date->ReDate.isWeekend
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given date is not in a weekend", () => {
@@ -26,6 +26,6 @@ describe("isWeekend", () => {
 
     let result = date->ReDate.isWeekend
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

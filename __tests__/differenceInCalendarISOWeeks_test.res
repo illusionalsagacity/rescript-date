@@ -11,7 +11,7 @@ describe("differenceInCalendarISOWeeks", () => {
 
     let result = fstDate->ReDate.differenceInCalendarISOWeeks(sndDate)
 
-    result |> expect |> toEqual(2.)
+    result->expect->toEqual(2.)
   })
 
   test("returns a negative number if the time value of the first date is smaller", () => {
@@ -20,7 +20,7 @@ describe("differenceInCalendarISOWeeks", () => {
 
     let result = fstDate->ReDate.differenceInCalendarISOWeeks(sndDate)
 
-    result |> expect |> toEqual(-2.)
+    result->expect->toEqual(-2.)
   })
 
   // edge cases
@@ -32,7 +32,7 @@ describe("differenceInCalendarISOWeeks", () => {
 
       let result = fstDate->ReDate.differenceInCalendarISOWeeks(sndDate)
 
-      result |> expect |> toEqual(1.)
+      result->expect->toEqual(1.)
     },
   )
 
@@ -42,7 +42,7 @@ describe("differenceInCalendarISOWeeks", () => {
 
     let result = fstDate->ReDate.differenceInCalendarISOWeeks(sndDate)
 
-    result |> expect |> toEqual(-1.)
+    result->expect->toEqual(-1.)
   })
 
   test("the days of weeks of the given dates are the same", () => {
@@ -51,7 +51,7 @@ describe("differenceInCalendarISOWeeks", () => {
 
     let result = fstDate->ReDate.differenceInCalendarISOWeeks(sndDate)
 
-    result |> expect |> toEqual(1.)
+    result->expect->toEqual(1.)
   })
 
   test("the given dates are the same", () => {
@@ -60,6 +60,6 @@ describe("differenceInCalendarISOWeeks", () => {
 
     let result = fstDate->ReDate.differenceInCalendarISOWeeks(sndDate)
 
-    result |> expect |> toEqual(0.)
+    result->expect->toEqual(0.)
   })
 })

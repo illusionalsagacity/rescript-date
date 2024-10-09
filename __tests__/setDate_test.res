@@ -11,6 +11,6 @@ describe("setDate", () => {
 
     let result = date->ReDate.setDate(20.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

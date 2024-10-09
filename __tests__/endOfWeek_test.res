@@ -25,11 +25,11 @@ describe("endOfWeek", () => {
           ~seconds=59.,
           ~milliseconds=999.,
           (),
-        ) |> fromFloat
+        )->fromFloat
 
       let result = date->ReDate.endOfWeek
 
-      result |> expect |> toEqual(expectedDate)
+      result->expect->toEqual(expectedDate)
     },
   )
 
@@ -51,11 +51,10 @@ describe("endOfWeek", () => {
         ~seconds=59.,
         ~milliseconds=999.,
         (),
-      ) |> fromFloat
-    let endOfWeek = ReDate.endOfWeek(~weekStartsOn=Monday)
+      )->fromFloat
 
-    let result = date->endOfWeek
+    let result = ReDate.endOfWeek(~weekStartsOn=Monday, date)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

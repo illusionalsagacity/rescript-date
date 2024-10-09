@@ -26,11 +26,11 @@ describe("endOfISOWeek", () => {
           ~seconds=59.,
           ~milliseconds=999.,
           (),
-        ) |> fromFloat
+        )->fromFloat
 
       let result = date->ReDate.endOfISOWeek
 
-      result |> expect |> toEqual(expectedDate)
+      result->expect->toEqual(expectedDate)
     },
   )
 })

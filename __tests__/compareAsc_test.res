@@ -11,7 +11,7 @@ describe("compareAsc", () => {
 
     let result = ReDate.compareAsc(fstDate, sndDate)
 
-    result |> expect |> toEqual(0)
+    result->expect->toEqual(0)
   })
 
   test("returns 1 if the first date is after the second one", () => {
@@ -20,7 +20,7 @@ describe("compareAsc", () => {
 
     let result = ReDate.compareAsc(fstDate, sndDate)
 
-    result |> expect |> toEqual(1)
+    result->expect->toEqual(1)
   })
 
   test("returns -1 if the first date is before the second one", () => {
@@ -29,7 +29,7 @@ describe("compareAsc", () => {
 
     let result = ReDate.compareAsc(fstDate, sndDate)
 
-    result |> expect |> toEqual(-1)
+    result->expect->toEqual(-1)
   })
 
   test(
@@ -46,7 +46,7 @@ describe("compareAsc", () => {
 
       let result = Belt.Array.eq(sortedArray, expected, (x, y) => x == y)
 
-      result |> expect |> toBeTruthy
+      result->expect->toBeTruthy
     },
   )
 })

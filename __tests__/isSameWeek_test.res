@@ -27,7 +27,7 @@ describe("isSameWeek", () => {
 
     let result = fstDate->ReDate.isSameWeek(sndDate)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given dates have different weeks", () => {
@@ -52,7 +52,7 @@ describe("isSameWeek", () => {
 
     let result = fstDate->ReDate.isSameWeek(sndDate)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 
   test("allows to specify which day is the first day of the week", () => {
@@ -74,10 +74,10 @@ describe("isSameWeek", () => {
       ~seconds=0.,
       (),
     )
-    let isSameWeek = ReDate.isSameWeek(~weekStartsOn=Monday)
+    let isSameWeek = (fsd, snd) => ReDate.isSameWeek(~weekStartsOn=Monday, fsd, snd)
 
     let result = fstDate->isSameWeek(sndDate)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 })

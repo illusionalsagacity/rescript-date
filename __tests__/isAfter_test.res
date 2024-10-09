@@ -11,7 +11,7 @@ describe("isAfter", () => {
 
     let result = fstDate->ReDate.isAfter(sndDate)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the first date is after the second one", () => {
@@ -20,6 +20,6 @@ describe("isAfter", () => {
 
     let result = fstDate->ReDate.isAfter(sndDate)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

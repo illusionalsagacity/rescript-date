@@ -11,7 +11,7 @@ describe("isSameYear", () => {
 
     let result = fstDate->ReDate.isSameYear(sndDate)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given dates have different years", () => {
@@ -20,6 +20,6 @@ describe("isSameYear", () => {
 
     let result = fstDate->ReDate.isSameYear(sndDate)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

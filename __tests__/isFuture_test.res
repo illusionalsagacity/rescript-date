@@ -10,7 +10,7 @@ describe("isFuture", () => {
 
     let result = date->ReDate.isFuture
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given date is not future one", () => {
@@ -18,7 +18,7 @@ describe("isFuture", () => {
 
     let result = date->ReDate.isFuture
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 
   test("returns false if the given date is current time", () => {
@@ -26,6 +26,6 @@ describe("isFuture", () => {
 
     let result = date->ReDate.isFuture
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

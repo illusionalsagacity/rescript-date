@@ -11,7 +11,7 @@ describe("differenceInBusinessDays", () => {
 
     let result = fstDate->ReDate.differenceInBusinessDays(sndDate)
 
-    result |> expect |> toEqual(0.)
+    result->expect->toEqual(0.)
   })
 
   test("returns the number of business days between the given dates, excluding weekends", () => {
@@ -20,7 +20,7 @@ describe("differenceInBusinessDays", () => {
 
     let result = fstDate->ReDate.differenceInBusinessDays(sndDate)
 
-    result |> expect |> toEqual(6.)
+    result->expect->toEqual(6.)
   })
 
   test("returns a negative number if the time value of the first date is smaller", () => {
@@ -29,7 +29,7 @@ describe("differenceInBusinessDays", () => {
 
     let result = fstDate->ReDate.differenceInBusinessDays(sndDate)
 
-    result |> expect |> toEqual(-6.)
+    result->expect->toEqual(-6.)
   })
 
   test("returns a correct number when the first date falls on a weekend", () => {
@@ -38,7 +38,7 @@ describe("differenceInBusinessDays", () => {
 
     let result = fstDate->ReDate.differenceInBusinessDays(sndDate)
 
-    result |> expect |> toEqual(2.)
+    result->expect->toEqual(2.)
   })
 
   test("returns a correct number when the second date falls on a weekend", () => {
@@ -47,7 +47,7 @@ describe("differenceInBusinessDays", () => {
 
     let result = fstDate->ReDate.differenceInBusinessDays(sndDate)
 
-    result |> expect |> toEqual(1.)
+    result->expect->toEqual(1.)
   })
 
   test("returns a correct number when both dates fall on a weekend", () => {
@@ -56,6 +56,6 @@ describe("differenceInBusinessDays", () => {
 
     let result = fstDate->ReDate.differenceInBusinessDays(sndDate)
 
-    result |> expect |> toEqual(5.)
+    result->expect->toEqual(5.)
   })
 })

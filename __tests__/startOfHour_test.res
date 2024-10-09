@@ -18,15 +18,15 @@ describe("startOfHour", () => {
           (),
         ),
         423.,
-      ) |> fromFloat
+      )->fromFloat
     let expectedDate =
       setMilliseconds(
         makeWithYMDHMS(~year=2018., ~month=0., ~date=1., ~hours=16., ~minutes=0., ~seconds=0., ()),
         0.,
-      ) |> fromFloat
+      )->fromFloat
 
     let result = date->ReDate.startOfHour
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

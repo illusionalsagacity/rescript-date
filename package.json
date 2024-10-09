@@ -1,5 +1,5 @@
 {
-  "name": "@mobily/rescript-date",
+  "name": "@illusionalsagacity/rescript-date",
   "description": "📆 Date manipulation in ReScript.",
   "version": "2.1.0",
   "scripts": {
@@ -23,19 +23,21 @@
     "package.json"
   ],
   "author": "Marcin Dziewulski <hello@mobily.pl>",
-  "homepage": "https://github.com/mobily/rescript-date#readme",
-  "bugs": "https://github.com/mobily/rescript-date/issues",
+  "homepage": "https://github.com/illusionalsagacity/rescript-date#readme",
+  "bugs": "https://github.com/illusionalsagacity/rescript-date/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mobily/rescript-date.git"
+    "url": "https://github.com/illusionalsagacity/rescript-date.git"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.7.0",
+    "@glennsl/rescript-jest": "^0.10.0",
     "all-contributors-cli": "^6.20.0",
     "coveralls": "^3.1.1",
-    "rescript": "^9.1.4"
+    "jest": "^29.7.0",
+    "rescript": "^11.1.4"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "packageManager": "yarn@4.5.0"
 }

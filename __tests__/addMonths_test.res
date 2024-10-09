@@ -11,7 +11,7 @@ describe("addMonths", () => {
 
     let result = date->ReDate.addMonths(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("adds 30 months", () => {
@@ -20,6 +20,6 @@ describe("addMonths", () => {
 
     let result = date->ReDate.addMonths(30.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

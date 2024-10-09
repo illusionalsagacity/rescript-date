@@ -10,7 +10,7 @@ describe("isWeekDay", () => {
 
     let result = date->ReDate.isWeekDay(ReDate.Friday)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns true if the given day of the week does not equal to the provided day", () => {
@@ -18,6 +18,6 @@ describe("isWeekDay", () => {
 
     let result = date->ReDate.isWeekDay(ReDate.Friday)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

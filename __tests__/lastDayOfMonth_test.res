@@ -25,11 +25,11 @@ describe("lastDayOfMonth", () => {
           ~seconds=0.,
           ~milliseconds=0.,
           (),
-        ) |> fromFloat
+        )->fromFloat
 
       let result = date->ReDate.lastDayOfMonth
 
-      result |> expect |> toEqual(expectedDate)
+      result->expect->toEqual(expectedDate)
     },
   )
 })

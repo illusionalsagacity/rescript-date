@@ -10,6 +10,6 @@ describe("getISOWeekYear", () => {
 
     let result = date->ReDate.getISOWeekYear
 
-    result |> expect |> toEqual(2008.)
+    result->expect->toEqual(2008.)
   })
 })

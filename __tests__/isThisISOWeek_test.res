@@ -40,7 +40,7 @@ describe("isThisISOWeek", () => {
 
     let result = date->ReDate.isThisISOWeek
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given date and the current date have different ISO weeks", () => {
@@ -48,6 +48,6 @@ describe("isThisISOWeek", () => {
 
     let result = date->ReDate.isThisISOWeek
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

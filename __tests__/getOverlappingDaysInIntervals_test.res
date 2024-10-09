@@ -19,7 +19,7 @@ describe("getOverlappingDaysInIntervals", () => {
 
     let result = interval->ReDate.getOverlappingDaysInIntervals(includedInterval)
 
-    result |> expect |> toEqual(10.)
+    result->expect->toEqual(10.)
   })
 
   test("returns the correct value for an interval including another interval", () => {
@@ -30,7 +30,7 @@ describe("getOverlappingDaysInIntervals", () => {
 
     let result = includingInterval->ReDate.getOverlappingDaysInIntervals(interval)
 
-    result |> expect |> toEqual(5.)
+    result->expect->toEqual(5.)
   })
 
   test("returns 0 for a valid non overlapping interval before another interval", () => {
@@ -41,7 +41,7 @@ describe("getOverlappingDaysInIntervals", () => {
 
     let result = earlierInterval->ReDate.getOverlappingDaysInIntervals(interval)
 
-    result |> expect |> toEqual(0.)
+    result->expect->toEqual(0.)
   })
 
   test("returns 0 for a valid non overlapping interval after another interval", () => {
@@ -52,6 +52,6 @@ describe("getOverlappingDaysInIntervals", () => {
 
     let result = laterInterval->ReDate.getOverlappingDaysInIntervals(interval)
 
-    result |> expect |> toEqual(0.)
+    result->expect->toEqual(0.)
   })
 })

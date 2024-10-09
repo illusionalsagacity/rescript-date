@@ -15,6 +15,6 @@ describe("max", () => {
 
     let result = dates->ReDate.max
 
-    result |> expect |> toEqual(d)
+    result->expect->toEqual(d)
   })
 })

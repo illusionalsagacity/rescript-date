@@ -11,7 +11,7 @@ describe("subDays", () => {
 
     let result = date->ReDate.subDays(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("subtracts 100 days", () => {
@@ -20,6 +20,6 @@ describe("subDays", () => {
 
     let result = date->ReDate.subDays(100.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

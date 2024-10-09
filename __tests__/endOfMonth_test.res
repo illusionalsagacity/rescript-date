@@ -25,11 +25,11 @@ describe("endOfMonth", () => {
           ~seconds=59.,
           ~milliseconds=999.,
           (),
-        ) |> fromFloat
+        )->fromFloat
 
       let result = date->ReDate.endOfMonth
 
-      result |> expect |> toEqual(expectedDate)
+      result->expect->toEqual(expectedDate)
     },
   )
 })

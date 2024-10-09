@@ -27,7 +27,7 @@ describe("addHours", () => {
 
     let result = date->ReDate.addHours(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("adds 60 hours", () => {
@@ -52,6 +52,6 @@ describe("addHours", () => {
 
     let result = date->ReDate.addHours(60.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

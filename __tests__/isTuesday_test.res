@@ -10,7 +10,7 @@ describe("isTuesday", () => {
 
     let result = date->ReDate.isTuesday
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given date is not Tuesday", () => {
@@ -18,6 +18,6 @@ describe("isTuesday", () => {
 
     let result = date->ReDate.isTuesday
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

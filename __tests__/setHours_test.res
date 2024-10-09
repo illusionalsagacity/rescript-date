@@ -11,6 +11,6 @@ describe("setHours", () => {
 
     let result = date->ReDate.setHours(9.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

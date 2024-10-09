@@ -11,7 +11,7 @@ describe("isEqual", () => {
 
     let result = fstDate->ReDate.isEqual(sndDate)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given dates are not equal", () => {
@@ -20,6 +20,6 @@ describe("isEqual", () => {
 
     let result = fstDate->ReDate.isEqual(sndDate)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

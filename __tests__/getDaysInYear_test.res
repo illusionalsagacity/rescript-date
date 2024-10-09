@@ -10,7 +10,7 @@ describe("getDaysInYear", () => {
 
     let result = date->ReDate.getDaysInYear
 
-    result |> expect |> toEqual(365)
+    result->expect->toEqual(365)
   })
 
   test("works on a leap year", () => {
@@ -18,6 +18,6 @@ describe("getDaysInYear", () => {
 
     let result = date->ReDate.getDaysInYear
 
-    result |> expect |> toEqual(366)
+    result->expect->toEqual(366)
   })
 })

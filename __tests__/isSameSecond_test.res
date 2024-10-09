@@ -27,7 +27,7 @@ describe("isSameSecond", () => {
 
     let result = fstDate->ReDate.isSameSecond(sndDate)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given dates have different seconds", () => {
@@ -52,6 +52,6 @@ describe("isSameSecond", () => {
 
     let result = fstDate->ReDate.isSameSecond(sndDate)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

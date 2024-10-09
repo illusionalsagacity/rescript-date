@@ -27,7 +27,7 @@ describe("isSameMinute", () => {
 
     let result = fstDate->ReDate.isSameMinute(sndDate)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given dates have different minutes", () => {
@@ -52,6 +52,6 @@ describe("isSameMinute", () => {
 
     let result = fstDate->ReDate.isSameMinute(sndDate)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

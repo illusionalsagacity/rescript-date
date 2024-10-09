@@ -15,7 +15,7 @@ describe("isWithinInterval", () => {
 
     let result = date->ReDate.isWithinInterval(interval)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns true if the given date has same time as the left boundary of the interval", () => {
@@ -23,7 +23,7 @@ describe("isWithinInterval", () => {
 
     let result = date->ReDate.isWithinInterval(interval)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns true if the given date has same time as the right boundary of the interval", () => {
@@ -31,7 +31,7 @@ describe("isWithinInterval", () => {
 
     let result = date->ReDate.isWithinInterval(interval)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns true if the given date and the both boundaries are the same", () => {
@@ -43,7 +43,7 @@ describe("isWithinInterval", () => {
 
     let result = date->ReDate.isWithinInterval(interval)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given date is outside of the interval", () => {
@@ -51,6 +51,6 @@ describe("isWithinInterval", () => {
 
     let result = date->ReDate.isWithinInterval(interval)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

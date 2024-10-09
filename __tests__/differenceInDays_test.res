@@ -27,7 +27,7 @@ describe("differenceInDays", () => {
 
     let result = fstDate->ReDate.differenceInDays(sndDate)
 
-    result |> expect |> toEqual(0.)
+    result->expect->toEqual(0.)
   })
 
   test("returns 0 if the given dates are the same", () => {
@@ -36,7 +36,7 @@ describe("differenceInDays", () => {
 
     let result = fstDate->ReDate.differenceInDays(sndDate)
 
-    result |> expect |> toEqual(0.)
+    result->expect->toEqual(0.)
   })
 
   test("returns the number of full days between the given dates", () => {
@@ -62,7 +62,7 @@ describe("differenceInDays", () => {
 
     let result = fstDate->ReDate.differenceInDays(sndDate)
 
-    result |> expect |> toEqual(7.)
+    result->expect->toEqual(7.)
   })
 
   test("returns a negative number if the time value of the first date is smaller", () => {
@@ -87,6 +87,6 @@ describe("differenceInDays", () => {
 
     let result = fstDate->ReDate.differenceInDays(sndDate)
 
-    result |> expect |> toEqual(-7.)
+    result->expect->toEqual(-7.)
   })
 })

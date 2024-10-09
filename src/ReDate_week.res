@@ -23,7 +23,7 @@ let endOfWeek = (~weekStartsOn=Sunday, date) => {
 }
 
 let differenceInCalendarWeeks = (~weekStartsOn=Sunday, fst, snd) => {
-  let startOfWeek = startOfWeek(~weekStartsOn)
+  let startOfWeek = date => startOfWeek(~weekStartsOn, date)
   let fst = startOfWeek(fst)
   let snd = startOfWeek(snd)
   let fstTime = Js.Date.getTime(fst) -. getTimezoneOffsetInMilliseconds(fst)
@@ -34,7 +34,7 @@ let differenceInCalendarWeeks = (~weekStartsOn=Sunday, fst, snd) => {
 }
 
 let isSameWeek = (~weekStartsOn=Sunday, fst, snd) => {
-  let startOfWeek = startOfWeek(~weekStartsOn)
+  let startOfWeek = date => startOfWeek(~weekStartsOn, date)
   ReDate_common.isEqual(startOfWeek(fst), startOfWeek(snd))
 }
 
@@ -54,7 +54,7 @@ let getWeekOfMonth = (~weekStartsOn=Sunday, date) => {
 }
 
 let getWeeksInMonth = (~weekStartsOn=Sunday, date) => {
-  let differenceInCalendarWeeks = differenceInCalendarWeeks(~weekStartsOn)
+  let differenceInCalendarWeeks = (fsd, snd) => differenceInCalendarWeeks(~weekStartsOn, fsd, snd)
   date
   ->ReDate_month.lastDayOfMonth
   ->differenceInCalendarWeeks(ReDate_month.startOfMonth(date))

@@ -21,7 +21,7 @@ describe("startOfWeekYear", () => {
 
       let result = date->ReDate.startOfWeekYear
 
-      result |> expect |> toEqual(expectedDate)
+      result->expect->toEqual(expectedDate)
     },
   )
 
@@ -35,11 +35,10 @@ describe("startOfWeekYear", () => {
         ~seconds=0.,
         ~milliseconds=0.,
         (),
-      ) |> fromFloat
-    let startOfWeekYear = ReDate.startOfWeekYear(~weekStartsOn=Monday)
+      )->fromFloat
 
-    let result = date->startOfWeekYear
+    let result = ReDate.startOfWeekYear(~weekStartsOn=Monday, date)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

@@ -11,7 +11,7 @@ describe("differenceInCalendarDays", () => {
 
     let result = fstDate->ReDate.differenceInCalendarDays(sndDate)
 
-    result |> expect |> toEqual(365.)
+    result->expect->toEqual(365.)
   })
 
   test("returns a negative number if the time value of the first date is smaller", () => {
@@ -36,6 +36,6 @@ describe("differenceInCalendarDays", () => {
 
     let result = fstDate->ReDate.differenceInCalendarDays(sndDate)
 
-    result |> expect |> toEqual(-365.)
+    result->expect->toEqual(-365.)
   })
 })

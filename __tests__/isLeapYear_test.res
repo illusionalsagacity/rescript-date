@@ -10,7 +10,7 @@ describe("isLeapYear", () => {
 
     let result = date->ReDate.isLeapYear
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given date isn't a leap year", () => {
@@ -18,6 +18,6 @@ describe("isLeapYear", () => {
 
     let result = date->ReDate.isLeapYear
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

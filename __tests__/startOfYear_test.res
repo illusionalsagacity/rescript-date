@@ -29,7 +29,7 @@ describe("startOfYear", () => {
 
       let result = date->ReDate.startOfYear
 
-      result |> expect |> toEqual(expectedDate)
+      result->expect->toEqual(expectedDate)
     },
   )
 })

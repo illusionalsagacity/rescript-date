@@ -2,7 +2,7 @@ open ReDate_utils
 
 let getISOWeekYear = date => {
   let year = Js.Date.getFullYear(date)
-  let startOfISOWeek = ReDate_week.startOfWeek(~weekStartsOn=Monday)
+  let startOfISOWeek = date => ReDate_week.startOfWeek(~weekStartsOn=Monday, date)
 
   let fourthOfJanuaryOfNextYear =
     Js.Date.setFullYearMD(Js.Date.fromFloat(0.), ~year=year +. 1., ~month=0., ~date=4., ())

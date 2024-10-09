@@ -13,7 +13,7 @@ describe("differenceInMonths", () => {
 
       let result = fstDate->ReDate.differenceInMonths(sndDate)
 
-      result |> expect |> toEqual(0.)
+      result->expect->toEqual(0.)
     },
   )
 
@@ -23,7 +23,7 @@ describe("differenceInMonths", () => {
 
     let result = fstDate->ReDate.differenceInMonths(sndDate)
 
-    result |> expect |> toEqual(1.)
+    result->expect->toEqual(1.)
   })
 
   test("the given dates are the same", () => {
@@ -32,7 +32,7 @@ describe("differenceInMonths", () => {
 
     let result = fstDate->ReDate.differenceInMonths(sndDate)
 
-    result |> expect |> toEqual(0.)
+    result->expect->toEqual(0.)
   })
 
   test("returns the number of full months between the given dates", () => {
@@ -42,7 +42,7 @@ describe("differenceInMonths", () => {
 
     let result = fstDate->ReDate.differenceInMonths(sndDate)
 
-    result |> expect |> toEqual(1.)
+    result->expect->toEqual(1.)
   })
 
   test("returns a negative number if the time value of the first date is smaller", () => {
@@ -51,6 +51,6 @@ describe("differenceInMonths", () => {
 
     let result = fstDate->ReDate.differenceInMonths(sndDate)
 
-    result |> expect |> toEqual(-1.)
+    result->expect->toEqual(-1.)
   })
 })

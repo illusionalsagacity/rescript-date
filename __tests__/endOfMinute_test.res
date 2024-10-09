@@ -27,10 +27,10 @@ describe("endOfMinute", () => {
           (),
         ),
         999.,
-      ) |> fromFloat
+      )->fromFloat
 
     let result = date->ReDate.endOfMinute
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

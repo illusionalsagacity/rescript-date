@@ -25,11 +25,11 @@ describe("endOfYear", () => {
           ~seconds=59.,
           ~milliseconds=999.,
           (),
-        ) |> fromFloat
+        )->fromFloat
 
       let result = date->ReDate.endOfYear
 
-      result |> expect |> toEqual(expectedDate)
+      result->expect->toEqual(expectedDate)
     },
   )
 })

@@ -29,7 +29,7 @@ describe("startOfWeek", () => {
 
       let result = date->ReDate.startOfWeek
 
-      result |> expect |> toEqual(expectedDate)
+      result->expect->toEqual(expectedDate)
     },
   )
 
@@ -52,10 +52,9 @@ describe("startOfWeek", () => {
       ~seconds=0.,
       (),
     )
-    let startOfWeek = ReDate.startOfWeek(~weekStartsOn=Monday)
 
-    let result = date->startOfWeek
+    let result = date->ReDate.startOfWeek(~weekStartsOn=Monday)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

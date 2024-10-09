@@ -19,10 +19,10 @@ describe("startOfMinute", () => {
       setMilliseconds(
         makeWithYMDHMS(~year=2018., ~month=8., ~date=10., ~hours=8., ~minutes=20., ~seconds=0., ()),
         0.,
-      ) |> fromFloat
+      )->fromFloat
 
     let result = date->ReDate.startOfMinute
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

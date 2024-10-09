@@ -11,7 +11,7 @@ describe("subWeeks", () => {
 
     let result = date->ReDate.subWeeks(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("subtracts 10 weeks", () => {
@@ -20,6 +20,6 @@ describe("subWeeks", () => {
 
     let result = date->ReDate.subWeeks(10.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

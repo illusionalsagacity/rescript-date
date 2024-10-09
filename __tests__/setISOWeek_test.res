@@ -11,7 +11,7 @@ describe("setISOWeek", () => {
 
     let result = date->ReDate.setISOWeek(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("sets the ISO week (last week)", () => {
@@ -19,7 +19,7 @@ describe("setISOWeek", () => {
     let expectedDate = makeWithYMDH(~year=2005., ~month=0., ~date=1., ~hours=12., ())
 
     let result = date->ReDate.setISOWeek(53.)
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("original date should not be changed when ISO week is changed", () => {
@@ -28,6 +28,6 @@ describe("setISOWeek", () => {
 
     date->ReDate.setISOWeek(53.)->ignore
 
-    date |> expect |> toEqual(expectedDate)
+    date->expect->toEqual(expectedDate)
   })
 })

@@ -13,7 +13,7 @@ describe("differenceInYears", () => {
 
       let result = fstDate->ReDate.differenceInYears(sndDate)
 
-      result |> expect |> toEqual(0.)
+      result->expect->toEqual(0.)
     },
   )
 
@@ -23,7 +23,7 @@ describe("differenceInYears", () => {
 
     let result = fstDate->ReDate.differenceInYears(sndDate)
 
-    result |> expect |> toEqual(2.)
+    result->expect->toEqual(2.)
   })
 
   test("the given dates are the same", () => {
@@ -32,7 +32,7 @@ describe("differenceInYears", () => {
 
     let result = fstDate->ReDate.differenceInYears(sndDate)
 
-    result |> expect |> toEqual(0.)
+    result->expect->toEqual(0.)
   })
 
   test("returns the number of full years between the given dates", () => {
@@ -41,7 +41,7 @@ describe("differenceInYears", () => {
 
     let result = fstDate->ReDate.differenceInYears(sndDate)
 
-    result |> expect |> toEqual(3.)
+    result->expect->toEqual(3.)
   })
 
   test("returns a negative number if the time value of the first date is smaller", () => {
@@ -50,6 +50,6 @@ describe("differenceInYears", () => {
 
     let result = fstDate->ReDate.differenceInYears(sndDate)
 
-    result |> expect |> toEqual(-3.)
+    result->expect->toEqual(-3.)
   })
 })

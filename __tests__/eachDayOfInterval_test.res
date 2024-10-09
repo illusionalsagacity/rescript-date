@@ -39,8 +39,8 @@ describe("eachDayOfInterval", () => {
       let result = ReDate.eachDayOfInterval(interval)
 
       Belt.Array.eq(result, expectedDates, (a, b) => getTime(a) == getTime(b))
-      |> expect
-      |> toBeTruthy
+      ->expect
+      ->toBeTruthy
     },
   )
 })

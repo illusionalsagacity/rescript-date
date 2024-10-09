@@ -10,7 +10,7 @@ describe("isFirstDayOfMonth", () => {
 
     let result = date->ReDate.isFirstDayOfMonth
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given date is not in the last day of month", () => {
@@ -18,6 +18,6 @@ describe("isFirstDayOfMonth", () => {
 
     let result = date->ReDate.isFirstDayOfMonth
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

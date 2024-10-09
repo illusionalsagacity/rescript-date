@@ -10,7 +10,7 @@ describe("getDaysInMonth", () => {
 
     let result = date->ReDate.getDaysInMonth
 
-    result |> expect |> toEqual(30.)
+    result->expect->toEqual(30.)
   })
 
   test("works for the February of a leap year", () => {
@@ -18,6 +18,6 @@ describe("getDaysInMonth", () => {
 
     let result = date->ReDate.getDaysInMonth
 
-    result |> expect |> toEqual(29.)
+    result->expect->toEqual(29.)
   })
 })

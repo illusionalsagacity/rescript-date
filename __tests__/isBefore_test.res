@@ -11,7 +11,7 @@ describe("isBefore", () => {
 
     let result = fstDate->ReDate.isBefore(sndDate)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the first date is before the second one", () => {
@@ -20,6 +20,6 @@ describe("isBefore", () => {
 
     let result = fstDate->ReDate.isBefore(sndDate)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

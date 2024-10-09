@@ -11,6 +11,6 @@ describe("setMinutes", () => {
 
     let result = date->ReDate.setMinutes(30.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

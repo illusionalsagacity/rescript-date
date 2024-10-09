@@ -10,7 +10,7 @@ describe("getISOWeek", () => {
 
     let result = date->ReDate.getISOWeek
 
-    result |> expect |> toEqual(53.)
+    result->expect->toEqual(53.)
   })
 
   test("returns the ISO week at 1 January 2016", () => {
@@ -18,7 +18,7 @@ describe("getISOWeek", () => {
 
     let result = date->ReDate.getISOWeek
 
-    result |> expect |> toEqual(53.)
+    result->expect->toEqual(53.)
   })
 
   test("returns the ISO week at 1 May 2016", () => {
@@ -26,7 +26,7 @@ describe("getISOWeek", () => {
 
     let result = date->ReDate.getISOWeek
 
-    result |> expect |> toEqual(17.)
+    result->expect->toEqual(17.)
   })
 
   test("returns the ISO week at 2 May 2016", () => {
@@ -34,7 +34,7 @@ describe("getISOWeek", () => {
 
     let result = date->ReDate.getISOWeek
 
-    result |> expect |> toEqual(18.)
+    result->expect->toEqual(18.)
   })
 
   test("returns the ISO week at 31 May 2016", () => {
@@ -42,6 +42,6 @@ describe("getISOWeek", () => {
 
     let result = date->ReDate.getISOWeek
 
-    result |> expect |> toEqual(22.)
+    result->expect->toEqual(22.)
   })
 })

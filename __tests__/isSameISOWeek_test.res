@@ -11,7 +11,7 @@ describe("isSameISOWeek", () => {
 
     let result = sndDate->ReDate.isSameISOWeek(fstDate)
 
-    result |> expect |> toEqual(true)
+    result->expect->toEqual(true)
   })
 
   test("returns false if the given dates have different ISO weeks", () => {
@@ -20,6 +20,6 @@ describe("isSameISOWeek", () => {
 
     let result = sndDate->ReDate.isSameISOWeek(fstDate)
 
-    result |> expect |> toEqual(false)
+    result->expect->toEqual(false)
   })
 })

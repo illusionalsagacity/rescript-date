@@ -1,15 +1,15 @@
 open ReDate_utils
 open ReDate_types
 
-let endOfISOWeek = ReDate_week.endOfWeek(~weekStartsOn=Monday)
+let endOfISOWeek = date => ReDate_week.endOfWeek(~weekStartsOn=Monday, date)
 
-let isSameISOWeek = ReDate_week.isSameWeek(~weekStartsOn=Monday)
+let isSameISOWeek = (fsd, snd) => ReDate_week.isSameWeek(~weekStartsOn=Monday, fsd, snd)
 
 let isThisISOWeek = date => isSameISOWeek(Js.Date.make(), date)
 
-let lastDayOfISOWeek = ReDate_week.lastDayOfWeek(~weekStartsOn=Monday)
+let lastDayOfISOWeek = date => ReDate_week.lastDayOfWeek(~weekStartsOn=Monday, date)
 
-let startOfISOWeek = ReDate_week.startOfWeek(~weekStartsOn=Monday)
+let startOfISOWeek = date => ReDate_week.startOfWeek(~weekStartsOn=Monday, date)
 
 let differenceInCalendarISOWeeks = (fst, snd) => {
   let fst = startOfISOWeek(fst)

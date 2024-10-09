@@ -11,7 +11,7 @@ describe("subYears", () => {
 
     let result = date->ReDate.subYears(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("subtracts 10 years", () => {
@@ -20,6 +20,6 @@ describe("subYears", () => {
 
     let result = date->ReDate.subYears(10.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

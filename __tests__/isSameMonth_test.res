@@ -27,7 +27,7 @@ describe("isSameMonth", () => {
 
     let result = fstDate->ReDate.isSameMonth(sndDate)
 
-    result |> expect |> toBeTruthy
+    result->expect->toBeTruthy
   })
 
   test("returns false if the given dates have different months", () => {
@@ -52,6 +52,6 @@ describe("isSameMonth", () => {
 
     let result = fstDate->ReDate.isSameMonth(sndDate)
 
-    result |> expect |> toBeFalsy
+    result->expect->toBeFalsy
   })
 })

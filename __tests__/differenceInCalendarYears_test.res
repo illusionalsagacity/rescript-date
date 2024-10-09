@@ -11,7 +11,7 @@ describe("differenceInCalendarYears", () => {
 
     let result = fstDate->ReDate.differenceInCalendarYears(sndDate)
 
-    result |> expect |> toEqual(2.)
+    result->expect->toEqual(2.)
   })
 
   test("returns a negative number if the time value of the first date is smaller", () => {
@@ -36,6 +36,6 @@ describe("differenceInCalendarYears", () => {
 
     let result = fstDate->ReDate.differenceInCalendarYears(sndDate)
 
-    result |> expect |> toEqual(-1.)
+    result->expect->toEqual(-1.)
   })
 })

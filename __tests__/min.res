@@ -15,6 +15,6 @@ describe("min", () => {
 
     let result = dates->ReDate.min
 
-    result |> expect |> toEqual(a)
+    result->expect->toEqual(a)
   })
 })

@@ -11,7 +11,7 @@ describe("subMonths", () => {
 
     let result = date->ReDate.subMonths(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("subtracts 30 months", () => {
@@ -20,6 +20,6 @@ describe("subMonths", () => {
 
     let result = date->ReDate.subMonths(30.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })

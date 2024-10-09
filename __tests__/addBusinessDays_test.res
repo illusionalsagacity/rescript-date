@@ -11,7 +11,7 @@ describe("addBusinessDays", () => {
 
     let result = date->ReDate.addBusinessDays(0.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("adds 1 business day", () => {
@@ -20,7 +20,7 @@ describe("addBusinessDays", () => {
 
     let result = date->ReDate.addBusinessDays(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("adds 100 business days", () => {
@@ -29,7 +29,7 @@ describe("addBusinessDays", () => {
 
     let result = date->ReDate.addBusinessDays(100.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("handles negative number", () => {
@@ -38,7 +38,7 @@ describe("addBusinessDays", () => {
 
     let result = date->ReDate.addBusinessDays(-100.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("returns Monday when 1 day is added on Friday", () => {
@@ -47,7 +47,7 @@ describe("addBusinessDays", () => {
 
     let result = date->ReDate.addBusinessDays(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("returns Monday when 1 day is added on Saturday", () => {
@@ -56,7 +56,7 @@ describe("addBusinessDays", () => {
 
     let result = date->ReDate.addBusinessDays(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 
   test("returns Monday when 1 day is added on Sunday", () => {
@@ -65,6 +65,6 @@ describe("addBusinessDays", () => {
 
     let result = date->ReDate.addBusinessDays(1.)
 
-    result |> expect |> toEqual(expectedDate)
+    result->expect->toEqual(expectedDate)
   })
 })
