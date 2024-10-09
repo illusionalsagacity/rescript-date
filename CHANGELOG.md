@@ -1,5 +1,9 @@
 # Changelog
 
+### `v2.1.1`
+
+Fixes compilation issues when used with uncurried mode with ReScript v11+
+
 ### `v2.1.0`
 
 - ✨ added [`getDay`](/api/weekday#getday)
